@@ -1,0 +1,264 @@
+/* ===================================================================
+   TOKENS — edit these to reskin the whole site
+=================================================================== */
+:root{
+  --ink: #12161f;
+  --ink-soft: #1a2030;
+  --paper: #f6f5f1;
+  --line: #2c3444;
+  --line-soft: rgba(44,52,68,0.5);
+  --signal: #f2a73b;
+  --muted: #8891a3;
+  --muted-on-paper: #6b7280;
+
+  --font-display: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --max: 880px;
+  --edge: clamp(24px, 6vw, 64px);
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  margin:0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+h1,h2,h3,h4{ margin: 0; font-weight: 800; letter-spacing: -0.02em; }
+p{ margin: 0; }
+a{ color: inherit; text-decoration: none; }
+ul,ol{ margin:0; padding:0; list-style:none; }
+
+@media (prefers-reduced-motion: reduce){
+  *{ scroll-behavior: auto !important; transition: none !important; }
+}
+
+/* ===================================================================
+   PIPELINE RAIL — the signature element: a schematic line running
+   down the page, standing in for the "wiring" this work is about.
+=================================================================== */
+.rail{
+  position: fixed;
+  top: 0; bottom: 0;
+  left: calc(var(--edge) - 1px);
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--line-soft) 6%, var(--line-soft) 94%, transparent);
+  z-index: 0;
+  display: none;
+}
+@media (min-width: 860px){ .rail{ display: block; } }
+
+/* ===================================================================
+   TOPBAR
+=================================================================== */
+.topbar{
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px var(--edge);
+  background: rgba(246,245,241,0.88);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(44,52,68,0.12);
+}
+.wordmark{ font-weight: 800; font-size: 17px; letter-spacing: -0.01em; }
+.wordmark span{ color: var(--signal); }
+.topnav{ display: flex; align-items: center; gap: 28px; font-size: 15px; }
+.topnav a:not(.nav-cta){ color: var(--muted-on-paper); }
+.topnav a:hover{ color: var(--ink); }
+.nav-cta{
+  padding: 8px 16px;
+  background: var(--ink);
+  color: var(--paper) !important;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+@media (max-width: 640px){
+  .topnav a:not(.nav-cta){ display:none; }
+}
+
+main{ position: relative; z-index: 1; }
+section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
+
+.tag{
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--signal);
+  margin: 0 0 20px;
+}
+
+/* ===================================================================
+   HERO
+=================================================================== */
+.hero{ padding-top: 120px; padding-bottom: 88px; }
+.hero h1{
+  font-size: clamp(38px, 6vw, 62px);
+  line-height: 1.05;
+  max-width: 11ch;
+}
+.hero-sub{
+  margin-top: 28px;
+  max-width: 54ch;
+  font-size: 18px;
+  color: #3a4152;
+}
+.hero-actions{ display: flex; gap: 14px; margin-top: 36px; flex-wrap: wrap; }
+
+.btn{
+  display: inline-block;
+  padding: 13px 24px;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+.btn-primary{ background: var(--ink); color: var(--paper); }
+.btn-primary:hover{ background: var(--ink-soft); }
+.btn-ghost{ border-color: var(--line-soft); color: var(--ink); }
+.btn-ghost:hover{ border-color: var(--ink); }
+.btn-large{ font-size: 17px; padding: 16px 30px; }
+
+/* ===================================================================
+   SERVICES
+=================================================================== */
+.services h2{ font-size: clamp(26px, 3.4vw, 34px); max-width: 16ch; margin-bottom: 44px; }
+.service-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--line-soft);
+  border: 1px solid var(--line-soft);
+}
+.service{ background: var(--paper); padding: 28px 26px; }
+.service h3{ font-size: 18px; margin-bottom: 10px; }
+.service p{ color: var(--muted-on-paper); font-size: 15px; }
+@media (max-width: 640px){ .service-grid{ grid-template-columns: 1fr; } }
+
+/* ===================================================================
+   WORK / CASE STUDIES
+=================================================================== */
+.work h2{ font-size: clamp(26px, 3.4vw, 34px); margin-bottom: 56px; max-width: 16ch; }
+.case{
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+  padding: 40px 0;
+  border-top: 1px solid var(--line-soft);
+}
+.case:last-of-type{ border-bottom: 1px solid var(--line-soft); }
+.case.reverse{ direction: rtl; }
+.case.reverse > *{ direction: ltr; }
+.case-num{ font-family: var(--font-mono); color: var(--signal); font-size: 13px; }
+.case-info h3{ font-size: 22px; margin: 10px 0 12px; }
+.case-info p{ color: var(--muted-on-paper); font-size: 15.5px; margin-bottom: 16px; }
+.case-meta{ display: flex; flex-wrap: wrap; gap: 8px; }
+.case-meta li{
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink);
+  border: 1px solid var(--line-soft);
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+.case-visual{
+  aspect-ratio: 4/3;
+  background: var(--ink);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+.case-visual::before{
+  content: attr(data-label);
+  position: absolute; bottom: 14px; left: 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+.case-visual::after{
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(242,167,59,0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(242,167,59,0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+/* EDIT: replace .case-visual divs in HTML with <img> tags once you have real screenshots */
+@media (max-width: 720px){
+  .case, .case.reverse{ grid-template-columns: 1fr; direction: ltr; }
+  .case-visual{ order: -1; }
+}
+.case-note{ margin-top: 28px; color: var(--muted-on-paper); font-size: 14px; font-style: italic; }
+.case-link{ display: inline-block; font-family: var(--font-mono); font-size: 13px; color: var(--signal); }
+.case-link:hover{ text-decoration: underline; }
+
+/* ===================================================================
+   PROCESS
+=================================================================== */
+.process h2{ font-size: clamp(26px, 3.4vw, 34px); margin-bottom: 48px; max-width: 16ch; }
+.process-list li{
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 20px;
+  padding: 28px 0;
+  border-top: 1px solid var(--line-soft);
+}
+.process-list li:last-child{ border-bottom: 1px solid var(--line-soft); }
+.p-num{ font-family: var(--font-mono); color: var(--signal); font-size: 14px; }
+.process-list h3{ font-size: 19px; margin-bottom: 8px; }
+.process-list p{ color: var(--muted-on-paper); font-size: 15.5px; max-width: 56ch; }
+
+/* ===================================================================
+   TESTIMONIALS
+=================================================================== */
+.testimonials{ background: var(--ink); color: var(--paper); max-width: 100%; padding-left: 0; padding-right: 0; }
+.testimonials .tag{ max-width: var(--max); margin: 0 auto 44px; padding: 0 var(--edge); }
+.testimonial-grid{
+  max-width: var(--max); margin: 0 auto; padding: 0 var(--edge);
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+}
+.testimonial-grid blockquote{ margin:0; }
+.testimonial-grid p{ font-size: 15.5px; line-height: 1.6; color: #dfe1e8; }
+.testimonial-grid cite{
+  display: block; margin-top: 16px;
+  font-family: var(--font-mono); font-style: normal; font-size: 12.5px; color: var(--signal);
+}
+@media (max-width: 800px){ .testimonial-grid{ grid-template-columns: 1fr; gap: 40px; } }
+
+/* ===================================================================
+   TOOLS
+=================================================================== */
+.tools h2{ display:none; }
+.tools-grid{
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+  background: var(--line-soft); border: 1px solid var(--line-soft);
+}
+.tool-cat{ background: var(--paper); padding: 22px 20px; }
+.tool-cat h4{ font-size: 13px; font-family: var(--font-mono); color: var(--signal); margin-bottom: 8px; font-weight: 500; }
+.tool-cat p{ font-size: 14.5px; color: var(--ink); }
+@media (max-width: 720px){ .tools-grid{ grid-template-columns: 1fr 1fr; } }
+
+/* ===================================================================
+   CONTACT
+=================================================================== */
+.contact{ text-align: left; padding-bottom: 60px; }
+.contact h2{ font-size: clamp(28px, 4vw, 40px); max-width: 16ch; margin-bottom: 16px; }
+.contact-sub{ max-width: 48ch; color: var(--muted-on-paper); font-size: 17px; margin-bottom: 32px; }
+.contact-links{ display: flex; gap: 24px; margin-top: 28px; font-family: var(--font-mono); font-size: 13.5px; }
+.contact-links a{ color: var(--muted-on-paper); }
+.contact-links a:hover{ color: var(--ink); }
+
+/* ===================================================================
+   FOOTER
+=================================================================== */
+.footer{
+  padding: 28px var(--edge) 40px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--muted-on-paper);
+  border-top: 1px solid var(--line-soft);
+}
