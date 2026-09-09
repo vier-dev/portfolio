@@ -182,7 +182,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 .hero-sub{
   margin-top: 28px;
   max-width: 54ch;
-  font-size: 15px;
+  font-size: 16px;
   color: #3a4152;
 }
 .hero-actions{ display: flex; gap: 14px; margin-top: 36px; flex-wrap: wrap; }
