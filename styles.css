@@ -165,7 +165,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 
 .tag{
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: 12px;
   color: var(--signal);
   margin: 0 0 20px;
 }
