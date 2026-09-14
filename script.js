@@ -51,7 +51,7 @@ if (track && slides.length){
 
   function goTo(i){
     current = (i + slides.length) % slides.length;
-    track.style.transform = `translateX(-${current * 100}%)`;
+    track.style.transform = `translateX(-${current * (100 / slides.length)}%)`;
     dots.forEach((d, idx) => d.classList.toggle('active', idx === current));
   }
 
