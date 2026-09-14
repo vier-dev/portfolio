@@ -337,6 +337,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 .t-slide{
   min-width: calc(100% / 3);
   box-sizing: border-box;
+   margin: 0;
   padding-right: 40px;
 }
 .t-slide p{ font-size: 18px; line-height: 1.65; color: #dfe1e8; max-width: 60ch; }
