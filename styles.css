@@ -165,7 +165,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 
 .tag{
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 12.5px;
   color: var(--signal);
   margin: 0 0 20px;
 }
@@ -179,10 +179,29 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   line-height: 1.05;
   max-width: 11ch;
 }
+.hero-top{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+}
+.hero-photo{
+  width: 148px;
+  height: 148px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--line-soft);
+}
+@media (max-width: 640px){
+  .hero-top{ flex-direction: column-reverse; align-items: flex-start; }
+  .hero-photo{ width: 96px; height: 96px; }
+}
+
 .hero-sub{
   margin-top: 28px;
   max-width: 54ch;
-  font-size: 16px;
+  font-size: 18px;
   color: #3a4152;
 }
 .hero-actions{ display: flex; gap: 14px; margin-top: 36px; flex-wrap: wrap; }
@@ -208,7 +227,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 .service-grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 4px;
+  gap: 1px;
   background: var(--line-soft);
   border: 1px solid var(--line-soft);
 }
@@ -307,6 +326,46 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   font-family: var(--font-mono); font-style: normal; font-size: 12.5px; color: var(--signal);
 }
 @media (max-width: 800px){ .testimonial-grid{ grid-template-columns: 1fr; gap: 40px; } }
+
+/* testimonial slider */
+.testimonial-slider{ max-width: var(--max); margin: 0 auto; padding: 0 var(--edge); overflow: hidden; }
+.testimonial-track{
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.t-slide{
+  min-width: 100%;
+  box-sizing: border-box;
+  padding-right: 8px;
+}
+.t-slide p{ font-size: 18px; line-height: 1.65; color: #dfe1e8; max-width: 60ch; }
+.t-slide cite{
+  display: block; margin-top: 18px;
+  font-family: var(--font-mono); font-style: normal; font-size: 12.5px; color: var(--signal);
+}
+.t-controls{
+  display: flex; align-items: center; gap: 18px;
+  margin-top: 36px;
+}
+.t-arrow{
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(246,245,241,0.25);
+  background: transparent;
+  color: var(--paper);
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.t-arrow:hover{ background: rgba(246,245,241,0.1); border-color: var(--signal); }
+.t-dots{ display: flex; gap: 8px; }
+.t-dot{
+  width: 7px; height: 7px; border-radius: 50%;
+  background: rgba(246,245,241,0.25);
+  cursor: pointer; border: none; padding: 0;
+  transition: background 0.2s ease;
+}
+.t-dot.active{ background: var(--signal); }
 
 /* ===================================================================
    TOOLS
