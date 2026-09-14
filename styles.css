@@ -208,7 +208,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 .service-grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
+  gap: 10px;
   background: var(--line-soft);
   border: 1px solid var(--line-soft);
 }
