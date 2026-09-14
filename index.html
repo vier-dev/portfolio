@@ -27,11 +27,15 @@
 <main id="top">
 
   <!-- ============ HERO ============ -->
-  <section class="hero">
+   <section class="hero">
     <p class="tag">DIGITAL OPERATIONS SPECIALIST · PHILIPPINES</p>
     <div class="status-badge"><span class="status-dot"></span> Open for projects</div>
-    <h1>I build the systems<br>that hold a business<br>together.</h1>
-    <div class="case-visual" data-label="Funnel map"></div>
+ 
+    <div class="hero-top">
+      <h1>I build the systems<br>that hold a business<br>together.</h1>
+      <img class="hero-photo" src="images/oliver.jpg" alt="Oliver Labawan">
+    </div>
+ 
     <p class="hero-sub">
       Websites, CRMs, and automations rarely fail from a lack of tools —
       they fail because the tools don't talk to each other. I design and
@@ -170,19 +174,26 @@
   <!-- ============ TESTIMONIALS ============ -->
   <section class="testimonials reveal">
     <p class="tag">05 — WHAT CLIENTS SAY</p>
-    <div class="testimonial-grid">
-      <blockquote>
-        <p>“Oliver reworked and maintained our website, managed our social presence, and supported technical initiatives like ManyChat automation. Reliable, professional, and clear in how he communicated — I'd confidently recommend him.”</p>
-        <cite>Elvira Muckelroy — Founder, Sunflower Girl®</cite>
-      </blockquote>
-      <blockquote>
-        <p>“Working with Oliver brought structure to our content. He handled planning, editing, and posting across social platforms, which made everything consistent and intentional.”</p>
-        <cite>Godwin Adrias</cite>
-      </blockquote>
-      <blockquote>
-        <p>“You helped me turn a messy setup into a complete, automated system. Now we have a funnel that actually guides leads from inquiry to conversion.”</p>
-        <cite>Deb Dalman</cite>
-      </blockquote>
+    <div class="testimonial-slider">
+      <div class="testimonial-track">
+        <blockquote class="t-slide">
+          <p>“Oliver reworked and maintained our website, managed our social presence, and supported technical initiatives like ManyChat automation. Reliable, professional, and clear in how he communicated — I'd confidently recommend him.”</p>
+          <cite>Elvira Muckelroy — Founder, Sunflower Girl®</cite>
+        </blockquote>
+        <blockquote class="t-slide">
+          <p>“Working with Oliver brought structure to our content. He handled planning, editing, and posting across social platforms, which made everything consistent and intentional.”</p>
+          <cite>Godwin Adrias</cite>
+        </blockquote>
+        <blockquote class="t-slide">
+          <p>“You helped me turn a messy setup into a complete, automated system. Now we have a funnel that actually guides leads from inquiry to conversion.”</p>
+          <cite>Deb Dalman</cite>
+        </blockquote>
+      </div>
+      <div class="t-controls">
+        <button class="t-arrow" id="tPrev" aria-label="Previous testimonial">←</button>
+        <div class="t-dots" id="tDots"></div>
+        <button class="t-arrow" id="tNext" aria-label="Next testimonial">→</button>
+      </div>
     </div>
   </section>
 
