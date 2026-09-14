@@ -201,7 +201,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 .hero-sub{
   margin-top: 28px;
   max-width: 54ch;
-  font-size: 16px;
+  font-size: 18px;
   color: #3a4152;
 }
 .hero-actions{ display: flex; gap: 14px; margin-top: 36px; flex-wrap: wrap; }
@@ -331,12 +331,13 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 .testimonial-slider{ max-width: var(--max); margin: 0 auto; padding: 0 var(--edge); overflow: hidden; }
 .testimonial-track{
   display: flex;
+  width: 300%;
   transition: transform 0.5s ease;
 }
 .t-slide{
-  min-width: 100%;
+  min-width: calc(100% / 3);
   box-sizing: border-box;
-  padding-right: 8px;
+  padding-right: 40px;
 }
 .t-slide p{ font-size: 18px; line-height: 1.65; color: #dfe1e8; max-width: 60ch; }
 .t-slide cite{
