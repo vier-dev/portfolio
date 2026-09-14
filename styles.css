@@ -210,15 +210,15 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   display: inline-block;
   padding: 13px 24px;
   border-radius: 3px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   border: 1px solid transparent;
 }
 .btn-primary{ background: var(--ink); color: var(--paper); }
 .btn-primary:hover{ background: var(--ink-soft); }
 .btn-ghost{ border-color: var(--line-soft); color: var(--ink); }
-.btn-ghost:hover{ border-color: var(--ink); }
-.btn-large{ font-size: 17px; padding: 16px 30px; }
+.btn-ghost:hover{ border-color: var(--signal); }
+.btn-large{ font-size: 16px; padding: 16px 30px; }
 
 /* ===================================================================
    SERVICES
