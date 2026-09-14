@@ -231,7 +231,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   background: none;
   border: none;
 }
-.service{ background: var(--paper); border: 1px solid color: #ff0000 ; border-radius: 10px; padding: 28px 26px; transition: border-color 0.3s ease;}
+.service{ background: var(--paper); border: 1px solid var(--line-soft) ; border-radius: 10px; padding: 28px 26px; transition: border-color 0.3s ease;}
 .service: hover {border: 1px solid var(--line-soft); }
 .service h3{ font-size: 18px; margin-bottom: 10px; }
 .service p{ color: var(--muted-on-paper); font-size: 15px; }
