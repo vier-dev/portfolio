@@ -39,6 +39,7 @@ const nextBtn = document.getElementById('tNext');
 
 if (track && slides.length){
   let current = 0;
+  track.style.setProperty('--slide-count', slides.length);
 
   slides.forEach((_, i) => {
     const dot = document.createElement('button');
