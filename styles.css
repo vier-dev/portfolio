@@ -186,8 +186,8 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   gap: 32px;
 }
 .hero-photo{
-  width: 320px;
-  height: 320px;
+  width: 270px;
+  height: 270px;
   border-radius: 10px;
   object-fit: cover;
   flex-shrink: 0;
