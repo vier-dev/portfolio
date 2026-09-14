@@ -29,3 +29,38 @@ function updateRail(){
 document.addEventListener('scroll', updateRail, { passive: true });
 window.addEventListener('resize', updateRail);
 updateRail();
+
+// Testimonial slider
+const track = document.querySelector('.testimonial-track');
+const slides = document.querySelectorAll('.t-slide');
+const dotsWrap = document.getElementById('tDots');
+const prevBtn = document.getElementById('tPrev');
+const nextBtn = document.getElementById('tNext');
+
+if (track && slides.length){
+  let current = 0;
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 't-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
+  const dots = document.querySelectorAll('.t-dot');
+
+  function goTo(i){
+    current = (i + slides.length) % slides.length;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, idx) => d.classList.toggle('active', idx === current));
+  }
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+
+  let autoplay = setInterval(() => goTo(current + 1), 6000);
+  track.closest('.testimonial-slider').addEventListener('mouseenter', () => clearInterval(autoplay));
+  track.closest('.testimonial-slider').addEventListener('mouseleave', () => {
+    autoplay = setInterval(() => goTo(current + 1), 6000);
+  });
+}
