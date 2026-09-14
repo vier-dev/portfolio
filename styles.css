@@ -315,30 +315,35 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 =================================================================== */
 .testimonials{ background: var(--ink); color: var(--paper); max-width: 100%; padding-left: 0; padding-right: 0; }
 .testimonials .tag{ max-width: var(--max); margin: 0 auto 44px; padding: 0 var(--edge); }
-.testimonial-grid{
-  max-width: var(--max); margin: 0 auto; padding: 0 var(--edge);
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+
+/* featured testimonial — pulled out of the slider */
+.t-featured{
+  max-width: var(--max); margin: 0 auto 56px; padding: 32px;
+  border-left: 3px solid var(--signal);
+  background: rgba(242,167,59,0.05);
 }
-.testimonial-grid blockquote{ margin:0; }
-.testimonial-grid p{ font-size: 15.5px; line-height: 1.6; color: #dfe1e8; }
-.testimonial-grid cite{
-  display: block; margin-top: 16px;
+.t-featured p{ font-size: 19px; line-height: 1.65; color: #dfe1e8; max-width: 68ch; margin: 0; }
+.t-featured cite{
+  display: block; margin-top: 18px;
   font-family: var(--font-mono); font-style: normal; font-size: 12.5px; color: var(--signal);
 }
-@media (max-width: 800px){ .testimonial-grid{ grid-template-columns: 1fr; gap: 40px; } }
+@media (max-width: 640px){
+  .t-featured{ padding: 24px; }
+  .t-featured p{ font-size: 17px; }
+}
 
 /* testimonial slider */
-.testimonial-slider{ max-width: var(--max); margin: 0 auto; padding: 0 var(--edge); overflow: hidden; }
+.testimonial-slider{ max-width: var(--max); margin: 0 auto; overflow: hidden; }
 .testimonial-track{
   display: flex;
-  width: 300%;
+  width: calc(100% * var(--slide-count, 3));
   transition: transform 0.5s ease;
 }
 .t-slide{
-  min-width: calc(100% / 3);
+  min-width: calc(100% / var(--slide-count, 3));
   box-sizing: border-box;
-   margin: 0;
-  padding-right: 60px;
+  padding-right: 40px;
+  margin: 0;
 }
 .t-slide p{ font-size: 18px; line-height: 1.65; color: #dfe1e8; max-width: 60ch; }
 .t-slide cite{
