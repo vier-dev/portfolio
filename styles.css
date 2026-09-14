@@ -14,7 +14,7 @@
   --font-display: 'Inter', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
 
-  --max: 1080px;
+  --max: 880px;
   --edge: clamp(24px, 6vw, 64px);
 }
 
@@ -177,7 +177,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 .hero h1{
   font-size: clamp(38px, 6vw, 62px);
   line-height: 1.05;
-  max-width: 11ch;
+  max-width: 14ch;
 }
 .hero-top{
   display: flex;
@@ -200,7 +200,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 
 .hero-sub{
   margin-top: 28px;
-  max-width: 54ch;
+  max-width: 70ch;
   font-size: 18px;
   color: #3a4152;
 }
@@ -231,7 +231,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   background: none;
   border: none;
 }
-.service{ background: var(--paper); border: 1px solid var(--line-soft); border-radius: 10px; padding: 28px 26px; transition: border-color 0.3s ease;}
+.service{ background: var(--paper); border: 1px solid color: #ff0000 ; border-radius: 10px; padding: 28px 26px; transition: border-color 0.3s ease;}
 .service: hover {border: 1px solid var(--line-soft); }
 .service h3{ font-size: 18px; margin-bottom: 10px; }
 .service p{ color: var(--muted-on-paper); font-size: 15px; }
@@ -323,7 +323,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   border-left: 3px solid var(--signal);
   background: rgba(242,167,59,0.05);
 }
-.t-featured p{ font-size: 16px; line-height: 1.65; color: #dfe1e8; max-width: 68ch; margin: 0; text-align: justify; }
+.t-featured p{ font-size: 16px; line-height: 1.65; color: #dfe1e8; max-width: 90ch; margin: 0; text-align: justify; }
 .t-featured cite{
   display: block; margin-top: 18px;
   font-family: var(--font-mono); font-style: normal; font-size: 13.5px; color: var(--signal);
@@ -393,7 +393,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 =================================================================== */
 .contact{ text-align: left; padding-bottom: 60px; }
 .contact h2{ font-size: clamp(28px, 4vw, 40px); max-width: 16ch; margin-bottom: 16px; }
-.contact-sub{ max-width: 48ch; color: var(--muted-on-paper); font-size: 16px; margin-bottom: 32px; }
+.contact-sub{ max-width: 62ch; color: var(--muted-on-paper); font-size: 16px; margin-bottom: 32px; }
 .contact-links{ display: flex; gap: 24px; margin-top: 28px; font-family: var(--font-mono); font-size: 13.5px; }
 .contact-links a{ color: var(--muted-on-paper); }
 .contact-links a:hover{ color: var(--ink); }
