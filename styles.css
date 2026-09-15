@@ -253,7 +253,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 .case.reverse > *{ direction: ltr; }
 .case-num{ font-family: var(--font-mono); color: var(--signal); font-size: 13px; }
 .case-info h3{ font-size: 22px; margin: 10px 0 12px; }
-.case-info p{ color: var(--muted-on-paper); font-size: 15.5px; margin-bottom: 16px; }
+.case-info p{ color: var(--muted-on-paper); font-size: 14px; margin-bottom: 16px; text-align: justify; }
 .case-meta{ display: flex; flex-wrap: wrap; gap: 8px; }
 .case-meta li{
   font-family: var(--font-mono);
@@ -296,7 +296,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   .case-visual{ order: -1; }
 }
 .case-note{ margin-top: 28px; color: var(--muted-on-paper); font-size: 14px; font-style: italic; }
-.case-link{ display: inline-block; font-family: var(--font-mono); font-size: 13px; color: var(--line-soft); margin-top: 32px; }
+.case-link{ display: inline-block; font-family: var(--font-mono); font-size: 13px; color: var(--ink); margin-top: 32px; }
 .case-link:hover{ text-decoration: underline; color: var(--signal);}
 
 /* ===================================================================
