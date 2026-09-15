@@ -291,7 +291,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   .case-visual{ order: -1; }
 }
 .case-note{ margin-top: 28px; color: var(--muted-on-paper); font-size: 14px; font-style: italic; }
-.case-link{ display: inline-block; font-family: var(--font-mono); font-size: 13px; color: var(--signal); }
+.case-link{ display: inline-block; font-family: var(--font-mono); font-size: 13px; color: var(--signal); padding-below: 14px; }
 .case-link:hover{ text-decoration: underline; }
 
 /* ===================================================================
