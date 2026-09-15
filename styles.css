@@ -223,7 +223,8 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 /* ===================================================================
    SERVICES
 =================================================================== */
-.services h2{ background: var(--ink); font-size: clamp(26px, 3.4vw, 34px); max-width: 16ch; margin-bottom: 44px; }
+.services-reveal{ background: var(--ink); color: var(--paper); max-width: 100%; padding-left: 0; padding-right: 0; }
+.services h2{ font-size: clamp(26px, 3.4vw, 34px); max-width: 16ch; margin-bottom: 44px; }
 .service-grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
