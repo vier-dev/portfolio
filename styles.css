@@ -261,8 +261,13 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   color: var(--ink);
   border: 1px solid var(--line-soft);
   padding: 4px 10px;
-  border-radius: 2px;
+  border-radius: 6px;
 }
+
+.case-meta li:hover{
+  border: 1px solid var(--signal);
+}
+
 .case-visual{
   aspect-ratio: 4/3;
   background: var(--ink);
