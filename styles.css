@@ -223,7 +223,6 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 /* ===================================================================
    SERVICES
 =================================================================== */
-.services{ background: var(--ink); color: var(--paper); padding-left: 0; padding-right: 0; }
 .services h2{ font-size: clamp(26px, 3.4vw, 34px); max-width: 16ch; margin-bottom: 44px; }
 .service-grid{
   display: grid;
