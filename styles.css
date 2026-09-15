@@ -322,7 +322,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   border-left: 3px solid var(--signal);
   background: rgba(242,167,59,0.05);
 }
-.t-featured p{ font-size: 16px; line-height: 1.65; color: #dfe1e8; max-width: 90ch; margin: 0; text-align: justify; }
+.t-featured p{ font-size: clamp(26px, 3.4vw, 34px); line-height: 1.65; color: #dfe1e8; max-width: 90ch; margin: 0; text-align: justify; }
 .t-featured cite{
   display: block; margin-top: 18px;
   font-family: var(--font-mono); font-style: normal; font-size: 13.5px; color: var(--signal);
