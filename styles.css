@@ -286,6 +286,10 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   overflow: hidden;
    display: block ; 
 }
+
+.case-info a.case-link{ cursor: pointer; }
+.case > a{ display: block; }    
+
 .case-visual::before{
   content: attr(data-label);
   position: absolute; bottom: 14px; left: 16px;
