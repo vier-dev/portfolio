@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunflower Girl — Case Study | Oliver Labawan</title>
+<meta name="description" content="Brand ecosystem rebuild for Sunflower Girl — website, CRM, and content operations brought into one system.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css?v=2">
+</head>
+<body>
+
+<div class="rail" aria-hidden="true"><div class="rail-fill" id="railFill"></div></div>
+
+<header class="topbar">
+  <a href="../index.html#top" class="wordmark"> vier <span><b>·</b></span> dev </a>
+  <nav class="topnav">
+    <a href="../index.html#work">Work</a>
+    <a href="index.html">All Case Studies</a>
+    <a href="../index.html#contact" class="nav-cta">Get in touch</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero" style="padding-bottom: 48px;">
+    <p class="tag"><a href="index.html" style="color:var(--signal);">← BACK TO SELECTED WORK</a></p>
+    <h1 style="max-width: 18ch;">Sunflower Girl — brand ecosystem rebuild</h1>
+    <p class="hero-sub">
+      Website redesign, CRM restructuring, and ongoing content operations for a
+      botanical skincare brand serving women 40+ — turning a disconnected setup
+      into one cohesive, premium-feeling system.
+    </p>
+    <ul class="case-meta" style="margin-top: 24px;">
+      <li>Website Rebuild</li>
+      <li>SEO & Web Management</li>
+      <li>Workflow Automations</li>
+      <li>CRM Optimization</li>
+      <li>Content Creation & Brand Consistency</li>
+      <li>Social Media Management</li>
+      <li>Analytics Reporting</li>
+      <li>Market & Competitor Research</li>
+    </ul>
+    <div class="hero-actions">
+      <a href="https://www.sunflowergirl.com/" target="_blank" rel="noopener" class="btn btn-primary">View live site →</a>
+    </div>
+  </section>
+
+  <div class="case-visual" data-label="Sunflower Girl" style="max-width: var(--max); margin: 0 auto 80px; padding: 0 var(--edge); aspect-ratio: 16/9;"></div>
+
+  <section class="process reveal">
+    <p class="tag">THE CHALLENGE</p>
+    <p style="font-size:17px; color:#3a4152; max-width:70ch; margin-bottom: 60px;">
+      Sunflower Girl's products were premium and intentional — but the site, CRM,
+      and content didn't reflect that. Branding was inconsistent across channels,
+      CRM tagging was messy, and there was no repeatable process for keeping
+      content on-brand week to week.
+      <!-- EDIT ME: swap in your real challenge details -->
+    </p>
+
+    <p class="tag">THE APPROACH</p>
+    <ol class="process-list" style="margin-bottom: 60px;">
+      <li>
+        <span class="p-num">01</span>
+        <div>
+          <h3>Website redesign</h3>
+          <p>Rebuilt the site to match the brand's premium, botanical identity and improve conversion paths.</p>
+        </div>
+      </li>
+      <li>
+        <span class="p-num">02</span>
+        <div>
+          <h3>CRM restructuring</h3>
+          <p>Cleaned up tagging and automations so customer data actually supported marketing decisions.</p>
+        </div>
+      </li>
+      <li>
+        <span class="p-num">03</span>
+        <div>
+          <h3>Content system</h3>
+          <p>Set up a repeatable content and social process to keep output consistent and on-brand.</p>
+        </div>
+      </li>
+    </ol>
+
+    <p class="tag">THE RESULT</p>
+    <p style="font-size:17px; color:#3a4152; max-width:70ch;">
+      A single, cohesive system — site, CRM, and content working from the same
+      playbook instead of three disconnected efforts.
+      <!-- EDIT ME: swap in real results/metrics if you have them -->
+    </p>
+  </section>
+
+  <section class="testimonials reveal">
+    <p class="tag">CLIENT FEEDBACK</p>
+    <blockquote class="t-featured">
+      <p>“During his time with my company, he played an important role in both creative and technical aspects of the business. He reworked and maintained our website, managed our social media presence on Facebook and Instagram, and handled social media content creation, including visuals and copywriting. Oliver also supported various technical initiatives, including implementing tools such as ManyChat and other applications to improve workflow and automation. In addition to this, he contributed to graphic design and video editing projects as needed. He managed his time efficiently, followed directions carefully, and was consistently receptive to feedback. Communication was clear and dependable, which made collaboration smooth and productive. Beyond his skills, Oliver was a pleasure to work with on a personal level. He was reliable, professional, and a positive team member. I appreciated his support and contributions and would confidently recommend him for virtual assistant and digital support roles.”</p>
+      <cite>Elvira Muckelroy — Founder, Sunflower Girl®</cite>
+    </blockquote>
+  </section>
+
+  <section class="contact reveal">
+    <h2 style="max-width: 20ch;">Want a similar system built for your brand?</h2>
+    <div class="hero-actions">
+      <a href="../index.html#contact" class="btn btn-primary">Work with me</a>
+      <a href="index.html" class="btn btn-ghost">See more case studies</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2022–<span id="year"></span> Oliver Labawan | Vier.Dev · Built and maintained by hand.</p>
+</footer>
+
+<script src="../script.js?v=2"></script>
+</body>
+</html>
