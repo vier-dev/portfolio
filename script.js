@@ -1,4 +1,5 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // Reveal sections as they scroll into view
 const revealEls = document.querySelectorAll('.reveal');
