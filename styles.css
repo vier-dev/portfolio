@@ -284,6 +284,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   border-radius: 4px;
   position: relative;
   overflow: hidden;
+   display: block ; 
 }
 .case-visual::before{
   content: attr(data-label);
