@@ -30,6 +30,23 @@ function updateRail(){
 document.addEventListener('scroll', updateRail, { passive: true });
 window.addEventListener('resize', updateRail);
 updateRail();
+ 
+// Smooth-scroll to any #section link without leaving the hash in the URL
+document.querySelectorAll('a[href*="#"]').forEach(link => {
+  const [path, hash] = link.getAttribute('href').split('#');
+  if (!hash) return;
+  // Only intercept links pointing at THIS page (no path, or path === current page)
+  const samePage = !path || path === '' || path === window.location.pathname.split('/').pop();
+  if (!samePage) return;
+ 
+  link.addEventListener('click', (e) => {
+    const target = hash === 'top' ? document.body : document.getElementById(hash);
+    if (!target) return; // let it behave normally if the target doesn't exist here
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: hash === 'top' ? 'start' : 'start' });
+    history.pushState(null, '', window.location.pathname);
+  });
+});
 
 // Testimonial slider
 const track = document.querySelector('.testimonial-track');
