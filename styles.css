@@ -52,7 +52,7 @@ ul,ol{ margin:0; padding:0; list-style:none; }
   display: none;
   overflow: hidden;
    left: calc(var(--rail-left) - 1px);
-   left: calc(var(--edge) - 1px);
+   left: calc(var(--rail-left) - 1px);
 }
 .rail-fill{
   position: absolute;
