@@ -16,6 +16,7 @@
 
   --max: 880px;
   --edge: clamp(24px, 6vw, 64px);
+   --rail-left: clamp(16px, 3vw, 40px);
 }
 
 *{ box-sizing: border-box; }
@@ -51,6 +52,7 @@ ul,ol{ margin:0; padding:0; list-style:none; }
   z-index: 0;
   display: none;
   overflow: hidden;
+   left: calc(var(--rail-left) - 1px);
 }
 .rail-fill{
   position: absolute;
