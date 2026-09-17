@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automations | Oliver Labawan</title>
+<meta name="description" content="n8n and Zapier workflows built for lead scoring, tagging, notifications, and reporting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css?v=2">
+</head>
+<body>
+
+<div class="rail" aria-hidden="true"><div class="rail-fill" id="railFill"></div></div>
+
+<header class="topbar">
+  <a href="../index.html#top" class="wordmark"> vier <span><b>·</b></span> dev </a>
+  <nav class="topnav">
+    <a href="index.html">All Work</a>
+    <a href="../index.html#contact" class="nav-cta">Get in touch</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero" style="padding-bottom: 48px;">
+    <p class="tag"><a href="index.html" style="color:var(--signal);">← BACK TO SELECTED WORK</a></p>
+    <h1 style="max-width: 16ch;">Automations</h1>
+    <p class="hero-sub">n8n and Zapier workflows built for lead scoring, tagging, notifications, and reporting.</p>
+  </section>
+
+  <!-- SCREENSHOT SLIDER — add/remove .img-slide blocks to change the sequence -->
+  <section class="services reveal">
+    <p class="tag">WORKFLOW WALKTHROUGH</p>
+    <div class="img-slider">
+      <div class="img-track" id="imgTrack">
+
+        <!-- EDIT ME: slide 1 -->
+        <figure class="img-slide">
+          <div class="case-visual" data-label="Step 1"></div>
+          <figcaption>Caption describing this step of the workflow.</figcaption>
+        </figure>
+
+        <!-- EDIT ME: slide 2 -->
+        <figure class="img-slide">
+          <div class="case-visual" data-label="Step 2"></div>
+          <figcaption>Caption describing this step of the workflow.</figcaption>
+        </figure>
+
+        <!-- EDIT ME: slide 3 -->
+        <figure class="img-slide">
+          <div class="case-visual" data-label="Step 3"></div>
+          <figcaption>Caption describing this step of the workflow.</figcaption>
+        </figure>
+
+      </div>
+      <div class="t-controls">
+        <button class="t-arrow" id="imgPrev" aria-label="Previous screenshot">←</button>
+        <div class="t-dots" id="imgDots"></div>
+        <button class="t-arrow" id="imgNext" aria-label="Next screenshot">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAMPLES — duplicate a .service block below to add more -->
+  <section class="services reveal">
+    <p class="tag">AUTOMATION SAMPLES</p>
+    <div class="service-grid">
+
+      <!-- EDIT ME: sample 1 -->
+      <div class="service">
+        <h3>Sample title</h3>
+        <p>Short description of what this sample is and the problem it solved.</p>
+        <!-- Optional: swap this div for <img src="../images/your-screenshot.png" style="width:100%;border-radius:6px;margin-top:12px;"> -->
+        <div class="case-visual" data-label="Preview" style="aspect-ratio:16/10; margin-top:16px;"></div>
+      </div>
+
+      <!-- EDIT ME: sample 2 -->
+      <div class="service">
+        <h3>Sample title</h3>
+        <p>Short description of what this sample is and the problem it solved.</p>
+        <div class="case-visual" data-label="Preview" style="aspect-ratio:16/10; margin-top:16px;"></div>
+      </div>
+
+    </div>
+    <p class="case-note">More samples added regularly — reach out if you want to see something specific.</p>
+  </section>
+
+  <section class="contact reveal">
+    <h2 style="max-width: 20ch;">Want something like this for your business?</h2>
+    <div class="hero-actions">
+      <a href="../index.html#contact" class="btn btn-primary">Work with me</a>
+      <a href="index.html" class="btn btn-ghost">See all work samples</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2022–<span id="year"></span> Oliver Labawan | Vier.Dev · Built and maintained by hand.</p>
+</footer>
+
+<script src="../script.js?v=2"></script>
+<script>
+(function(){
+  const track = document.getElementById('imgTrack');
+  const slides = track ? track.querySelectorAll('.img-slide') : [];
+  const dotsWrap = document.getElementById('imgDots');
+  const prevBtn = document.getElementById('imgPrev');
+  const nextBtn = document.getElementById('imgNext');
+  if (!track || !slides.length) return;
+
+  let current = 0;
+  track.style.setProperty('--slide-count', slides.length);
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 't-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
+  const dots = dotsWrap.querySelectorAll('.t-dot');
+
+  function goTo(i){
+    current = (i + slides.length) % slides.length;
+    track.style.transform = `translateX(-${current * (100 / slides.length)}%)`;
+    dots.forEach((d, idx) => d.classList.toggle('active', idx === current));
+  }
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+})();
+</script>
+</body>
+</html>
