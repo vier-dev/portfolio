@@ -391,6 +391,35 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 }
 .t-dot.active{ background: var(--signal); }
 
+
+/* image slider (reused on category pages, e.g. automations.html) */
+.img-slider{ overflow: hidden; }
+.img-track{
+  display: flex;
+  width: calc(100% * var(--slide-count, 3));
+  transition: transform 0.5s ease;
+}
+.img-slide{
+  min-width: calc(100% / var(--slide-count, 3));
+  box-sizing: border-box;
+  padding-right: 24px;
+  margin: 0;
+}
+.img-slide .case-visual{ aspect-ratio: 16/9; }
+.img-slide figcaption{
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--muted-on-paper);
+}
+.img-slider .t-controls{ margin-top: 20px; }
+.img-slider .t-arrow, .img-slider .t-dot{
+  border-color: var(--line-soft);
+  color: var(--ink);
+}
+.img-slider .t-arrow:hover{ background: rgba(44,52,68,0.06); border-color: var(--signal); }
+.img-slider .t-dot{ background: rgba(44,52,68,0.2); }
+.img-slider .t-dot.active{ background: var(--signal); }
+
 /* ===================================================================
    TOOLS
 =================================================================== */
