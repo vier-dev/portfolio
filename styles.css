@@ -16,7 +16,7 @@
 
   --max: 880px;
   --edge: clamp(24px, 6vw, 64px);
-   --rail-left: clamp(16px, 3vw, 40px);
+   --rail-left: clamp(60px, 8vw, 120px);
 }
 
 *{ box-sizing: border-box; }
