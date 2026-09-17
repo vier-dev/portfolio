@@ -15,7 +15,7 @@
   --font-mono: 'IBM Plex Mono', monospace;
 
   --max: 880px;
-  --edge: clamp(24px, 6vw, 64px);
+  --edge: clamp(60px, 8vw, 120px);
    --rail-left: clamp(60px, 8vw, 120px);
 }
 
