@@ -312,6 +312,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
     linear-gradient(90deg, rgba(242,167,59,0.12) 1px, transparent 1px);
   background-size: 28px 28px;
 }
+
 /* EDIT: replace .case-visual divs in HTML with <img> tags once you have real screenshots */
 @media (max-width: 720px){
   .case, .case.reverse{ grid-template-columns: 1fr; direction: ltr; }
@@ -320,6 +321,31 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 .case-note{ margin-top: 28px; color: var(--muted-on-paper); font-size: 14px; font-style: italic; }
 .case-link{ display: inline-block; font-family: var(--font-mono); font-size: 13px; color: var(--ink); margin-top: 32px; margin-right: 22px; }
 .case-link:hover{ text-decoration: underline; color: var(--signal);}
+
+/* Media grids for samples*/
+
+.media-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 24px 0 60px;
+}
+.media-item{ position: relative; display: block; }
+.media-item .case-visual{ aspect-ratio: 4/3; }
+.media-item.video .play-icon{
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(18,22,31,0.75);
+  color: var(--paper);
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+@media (max-width: 640px){
+  .media-grid{ grid-template-columns: repeat(2, 1fr); }
+}
 
 /* ===================================================================
    PROCESS
