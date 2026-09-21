@@ -118,11 +118,11 @@ if (track && slides.length){
 // Automation Image slider
 
 (function(){
-  const track = document.getElementById('automation-imgTrack');
-  const slides = track ? track.querySelectorAll('.automation-img-slide') : [];
-  const dotsWrap = document.getElementById('automation-imgDots');
-  const prevBtn = document.getElementById('automation-imgPrev');
-  const nextBtn = document.getElementById('automation-imgNext');
+  const track = document.getElementById('imgTrack2');
+  const slides = track ? track.querySelectorAll('.img-slide') : [];
+  const dotsWrap = document.getElementById('imgDots2');
+  const prevBtn = document.getElementById('imgPrev2');
+  const nextBtn = document.getElementById('imgNext2');
   if (!track || !slides.length) return;
 
   let current = 0;
