@@ -113,3 +113,34 @@ if (track && slides.length){
   prevBtn.addEventListener('click', () => goTo(current - 1));
   nextBtn.addEventListener('click', () => goTo(current + 1));
 })();
+
+
+// Automation Image slider
+
+(function(){
+  const track = document.getElementById('automation-imgTrack');
+  const slides = track ? track.querySelectorAll('.automation-img-slide') : [];
+  const dotsWrap = document.getElementById('automation-imgDots');
+  const prevBtn = document.getElementById('automation-imgPrev');
+  const nextBtn = document.getElementById('automation-imgNext');
+  if (!track || !slides.length) return;
+
+  let current = 0;
+  track.style.setProperty('--slide-count', slides.length);
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 't-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
+  const dots = dotsWrap.querySelectorAll('.t-dot');
+
+  function goTo(i){
+    current = (i + slides.length) % slides.length;
+    track.style.transform = `translateX(-${current * (100 / slides.length)}%)`;
+    dots.forEach((d, idx) => d.classList.toggle('active', idx === current));
+  }
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+})();
