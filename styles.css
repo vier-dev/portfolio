@@ -17,6 +17,10 @@
   --max: 880px;
   --edge: clamp(24px, 6vw, 64px);
    --rail-left: clamp(60px, 8vw, 120px);
+
+   --sunflower-girl: #f5b335;
+   --lovely-daisies: #789c4a;
+   --cpwrcim: #ff6c0e;
 }
 
 *{ box-sizing: border-box; }
