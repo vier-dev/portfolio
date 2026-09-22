@@ -367,6 +367,17 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   .media-grid{ grid-template-columns: repeat(2, 1fr); }
 }
 
+.thumb-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.thumb-row .case-visual{ aspect-ratio: 16/9; }
+@media (max-width: 640px){
+  .thumb-row{ grid-template-columns: 1fr; }
+}
+
 /* ===================================================================
    PROCESS
 =================================================================== */
