@@ -136,11 +136,15 @@ ul,ol{ margin:0; padding:0; list-style:none; }
   height: 22px;
   width: auto;
   display: block;
-  filter: grayscale(100%) opacity(0.6);
-  transition: filter 0.25s ease;
 }
-.ticker-track span:hover img{
-  filter: grayscale(0%) opacity(1);
+
+/* for logos that are white/light and need a dark backing */
+.ticker-track span.logo-dark{
+  background: var(--ink);
+  padding: 6px 10px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
 }
 
 @keyframes scroll-left{
