@@ -348,7 +348,9 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  margin: 24px 0 60px;
+   max-width: var(--max);
+  margin: 24px auto 60px;
+  padding: 0 var(--edge);
 }
 .media-item{ position: relative; display: block; }
 .media-item .case-visual{ aspect-ratio: 4/3; }
@@ -370,12 +372,13 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 .thumb-row{
   max-width: var(--max);
   margin: 0 auto 16px;
+  padding: 0 var(--edge);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  padding: 0 var(--edge);
 }
 .thumb-row .case-visual{ aspect-ratio: 16/9; }
+
 @media (max-width: 640px){
   .thumb-row{ grid-template-columns: 1fr; }
 }
