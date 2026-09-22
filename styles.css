@@ -473,6 +473,18 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 .tool-cat p{ font-size: 14.5px; color: var(--ink); }
 @media (max-width: 720px){ .tools-grid{ grid-template-columns: 1fr 1fr; } }
 
+
+.ticker-track span img{
+  height: 22px;
+  width: auto;
+  display: block;
+  filter: grayscale(100%) opacity(0.6);
+  transition: filter 0.25s ease;
+}
+.ticker-track span:hover img{
+  filter: grayscale(0%) opacity(1);
+}
+
 /* ===================================================================
    CONTACT
 =================================================================== */
