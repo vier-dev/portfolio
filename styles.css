@@ -131,6 +131,18 @@ ul,ol{ margin:0; padding:0; list-style:none; }
   color: var(--muted-on-paper);
   white-space: nowrap;
 }
+
+.ticker-track span img{
+  height: 22px;
+  width: auto;
+  display: block;
+  filter: grayscale(100%) opacity(0.6);
+  transition: filter 0.25s ease;
+}
+.ticker-track span:hover img{
+  filter: grayscale(0%) opacity(1);
+}
+
 @keyframes scroll-left{
   from{ transform: translateX(0); }
   to{ transform: translateX(-50%); }
@@ -472,18 +484,6 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 .tool-cat h4{ font-size: 13px; font-family: var(--font-mono); color: var(--signal); margin-bottom: 8px; font-weight: 500; }
 .tool-cat p{ font-size: 14.5px; color: var(--ink); }
 @media (max-width: 720px){ .tools-grid{ grid-template-columns: 1fr 1fr; } }
-
-
-.ticker-track span img{
-  height: 22px;
-  width: auto;
-  display: block;
-  filter: grayscale(100%) opacity(0.6);
-  transition: filter 0.25s ease;
-}
-.ticker-track span:hover img{
-  filter: grayscale(0%) opacity(1);
-}
 
 /* ===================================================================
    CONTACT
