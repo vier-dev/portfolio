@@ -30,39 +30,6 @@
     <p class="hero-sub">n8n and Zapier workflows built for lead scoring, tagging, notifications, and reporting.</p>
   </section>
 
-  <!-- SCREENSHOT SLIDER — add/remove .img-slide blocks to change the sequence -->
-  <section class="services reveal">
-    <p class="tag">WORKFLOW WALKTHROUGH</p>
-    <div class="img-slider">
-      <div class="img-track" id="imgTrack">
-
-        <!-- EDIT ME: slide 1 -->
-        <figure class="img-slide">
-          <div class="case-visual" data-label="Step 1"></div>
-          <figcaption>Caption describing this step of the workflow.</figcaption>
-        </figure>
-
-        <!-- EDIT ME: slide 2 -->
-        <figure class="img-slide">
-          <div class="case-visual" data-label="Step 2"></div>
-          <figcaption>Caption describing this step of the workflow.</figcaption>
-        </figure>
-
-        <!-- EDIT ME: slide 3 -->
-        <figure class="img-slide">
-          <div class="case-visual" data-label="Step 3"></div>
-          <figcaption>Caption describing this step of the workflow.</figcaption>
-        </figure>
-
-      </div>
-      <div class="t-controls">
-        <button class="t-arrow" id="imgPrev" aria-label="Previous screenshot">←</button>
-        <div class="t-dots" id="imgDots"></div>
-        <button class="t-arrow" id="imgNext" aria-label="Next screenshot">→</button>
-      </div>
-    </div>
-  </section>
-
   <!-- SAMPLES — duplicate a .service block below to add more -->
   <section class="services reveal">
     <p class="tag">AUTOMATION SAMPLES</p>
@@ -72,8 +39,9 @@
       <div class="service">
         <h3>Sample title</h3>
         <p>Short description of what this sample is and the problem it solved.</p>
-        <!-- Optional: swap this div for <img src="../images/your-screenshot.png" style="width:100%;border-radius:6px;margin-top:12px;"> -->
-        <div class="case-visual" data-label="Preview" style="aspect-ratio:16/10; margin-top:16px;"></div>
+          <img src="../images/social-media/walking-faith.png" class="case-visual" style="width:100%;border-radius:6px;margin-top:12px;aspect-ratio:16/10;">
+              <a href="https://www.speedtest.net/"></a>
+          </img>
       </div>
 
       <!-- EDIT ME: sample 2 -->
@@ -101,35 +69,5 @@
   <p>© 2022–<span id="year"></span> Oliver Labawan | Vier.Dev </p>
 </footer>
 
-<script src="../script.js?v=2"></script>
-<script>
-(function(){
-  const track = document.getElementById('imgTrack');
-  const slides = track ? track.querySelectorAll('.img-slide') : [];
-  const dotsWrap = document.getElementById('imgDots');
-  const prevBtn = document.getElementById('imgPrev');
-  const nextBtn = document.getElementById('imgNext');
-  if (!track || !slides.length) return;
-
-  let current = 0;
-  track.style.setProperty('--slide-count', slides.length);
-
-  slides.forEach((_, i) => {
-    const dot = document.createElement('button');
-    dot.className = 't-dot' + (i === 0 ? ' active' : '');
-    dot.addEventListener('click', () => goTo(i));
-    dotsWrap.appendChild(dot);
-  });
-  const dots = dotsWrap.querySelectorAll('.t-dot');
-
-  function goTo(i){
-    current = (i + slides.length) % slides.length;
-    track.style.transform = `translateX(-${current * (100 / slides.length)}%)`;
-    dots.forEach((d, idx) => d.classList.toggle('active', idx === current));
-  }
-  prevBtn.addEventListener('click', () => goTo(current - 1));
-  nextBtn.addEventListener('click', () => goTo(current + 1));
-})();
-</script>
 </body>
 </html>
