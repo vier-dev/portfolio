@@ -259,7 +259,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 .services h2{ font-size: clamp(26px, 3.4vw, 34px); max-width: 16ch; margin-bottom: 44px; }
 .service-grid{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   background: none;
   border: none;
