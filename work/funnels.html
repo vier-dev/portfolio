@@ -37,49 +37,49 @@
       <div class="service">
         <h3>Sunflower Girl</h3>
         <p>Luxury skincare brand — published, real client.</p>
-        <div class="case-visual" data-label="Sunflower Girl" style="aspect-ratio:1/1; margin-top:16px;"><img src="../images/website/sunflower-girl.png" alt="Sunflower Girl"></div>
+        <div class="case-visual lightbox-trigger" data-label="Sunflower Girl" style="aspect-ratio:1/1; margin-top:16px;"><img src="../images/website/sunflower-girl.png" alt="Sunflower Girl"></div>
       </div>
 
       <div class="service">
         <h3>CM Workshop</h3>
         <p>Figma concept — automotive brand.</p>
-        <div class="case-visual" data-label="CM Workshop" style="aspect-ratio:1/1; margin-top:16px;"><img src="../images/website/cm-workshop.png" alt="CM Workshop"></div>
+        <div class="case-visual lightbox-trigger" data-label="CM Workshop" style="aspect-ratio:1/1; margin-top:16px;"><img src="../images/website/cm-workshop.png" alt="CM Workshop"></div>
       </div>
 
       <div class="service">
         <h3>Schooly</h3>
         <p>Figma concept — educational institution.</p>
-        <div class="case-visual" data-label="Schooly" style="aspect-ratio:1/1; margin-top:16px;"><img src="../images/website/schooly.png" alt="Schooly"></div>
+        <div class="case-visual lightbox-trigger" data-label="Schooly" style="aspect-ratio:1/1; margin-top:16px;"><img src="../images/website/schooly.png" alt="Schooly"></div>
       </div>
 
       <div class="service">
         <h3>Ampero</h3>
         <p>Figma concept — web hosting/domain platform.</p>
-        <div class="case-visual" data-label="Ampero" style="aspect-ratio:1/1; margin-top:16px;"><img src="../images/website/ampero.png" alt="Ampero"></div>
+        <div class="case-visual lightbox-trigger" data-label="Ampero" style="aspect-ratio:1/1; margin-top:16px;"><img src="../images/website/ampero.png" alt="Ampero"></div>
       </div>
 
       <div class="service">
         <h3>Cadence</h3>
         <p>Figma concept — accounting firm landing page.</p>
-        <div class="case-visual" data-label="Cadence" style="aspect-ratio:1/1; margin-top:16px;"><img src="../images/website/cadence.png" alt="Cadence"></div>
+        <div class="case-visual lightbox-trigger" data-label="Cadence" style="aspect-ratio:1/1; margin-top:16px;"><img src="../images/website/cadence.png" alt="Cadence"></div>
       </div>
 
       <div class="service">
         <h3>Travella</h3>
         <p>Figma concept — travel brand.</p>
-        <div class="case-visual" data-label="Travella" style="aspect-ratio:1/1; margin-top:16px;"><img src="../images/website/travella.png" alt="Travella"></div>
+        <div class="case-visual lightbox-trigger" data-label="Travella" style="aspect-ratio:1/1; margin-top:16px;"><img src="../images/website/travella.png" alt="Travella"></div>
       </div>
 
       <div class="service">
         <h3>WasteD</h3>
         <p>Figma concept.</p>
-        <div class="case-visual" data-label="WasteD" style="aspect-ratio:1/1; margin-top:16px;"><img src="../images/website/wasted.png" alt="WasteD"></div>
+        <div class="case-visual lightbox-trigger" data-label="WasteD" style="aspect-ratio:1/1; margin-top:16px;"><img src="../images/website/wasted.png" alt="WasteD"></div>
       </div>
 
       <div class="service">
         <h3>Farm Table</h3>
         <p>Figma concept — food/farm brand.</p>
-        <div class="case-visual" data-label="Farm Table" style="aspect-ratio:1/1; margin-top:16px;"><img src="../images/website/farm-table.png" alt="Farm Table"></div>
+        <div class="case-visual lightbox-trigger" data-label="Farm Table" style="aspect-ratio:1/1; margin-top:16px;"><img src="../images/website/farm-table.png" alt="Farm Table"></div>
       </div>
 
     </div>
@@ -96,10 +96,43 @@
 
 </main>
 
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">✕</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
 <footer class="footer">
   <p>© 2022–<span id="year"></span> Oliver Labawan | Vier.Dev · Built and maintained by hand.</p>
 </footer>
 
 <script src="../script.js?v=2"></script>
+<script>
+(function(){
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeBtn = document.getElementById('lightboxClose');
+
+  document.querySelectorAll('.lightbox-trigger').forEach(el => {
+    el.style.cursor = 'zoom-in';
+    el.addEventListener('click', () => {
+      const img = el.querySelector('img');
+      if (!img) return;
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function close(){
+    lightbox.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+  closeBtn.addEventListener('click', close);
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) close(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+})();
+</script>
 </body>
 </html>
