@@ -113,23 +113,25 @@ ul,ol{ margin:0; padding:0; list-style:none; }
 .ticker{
   margin-top: 44px;
   overflow: hidden;
-  border-top: 1px solid var(--line-soft);
-  border-bottom: 1px solid var(--line-soft);
-  padding: 16px 0;
+  background: var(--ink);
+  border-top: none;
+  border-bottom: none;
+  padding: 24px 0;
   -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
 }
+
 .ticker-track{
   display: flex;
   gap: 40px;
   width: max-content;
   animation: scroll-left 26s linear infinite;
 }
+
 .ticker-track span{
   font-family: var(--font-mono);
   font-size: 13px;
-  color: var(--muted-on-paper);
-  white-space: nowrap;
+  color: var(--muted);
 }
 
 .ticker-track span img{
