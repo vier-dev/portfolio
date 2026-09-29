@@ -151,8 +151,8 @@ main{ position: relative; z-index: 1; }
 section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 
 .tag{
-  font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-family: var(--font-display);
+  font-size: 13px;
   color: var(--signal);
   margin: 0 0 20px;
 }
@@ -188,7 +188,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 .hero-badge{
   position: absolute;
   bottom: -16px; left: -16px;
-  background: var(--ink-soft);
+  background: var(--signal);
   color: var(--paper);
   font-family: var(--font-mono);
   font-size: 11px;
@@ -218,6 +218,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   font-size: 16px;
   color: #3a4152;
 }
+
 .hero-actions{ display: flex; gap: 14px; margin-top: 36px; flex-wrap: wrap; }
 
 .btn{
