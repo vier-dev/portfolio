@@ -140,15 +140,6 @@ ul,ol{ margin:0; padding:0; list-style:none; }
   display: block;
 }
 
-/* for logos that are white/light and need a dark backing */
-.ticker-track span.logo-dark{
-  background: var(--ink);
-  padding: 6px 10px;
-  border-radius: 4px;
-  display: inline-flex;
-  align-items: center;
-}
-
 @keyframes scroll-left{
   from{ transform: translateX(0); }
   to{ transform: translateX(-50%); }
