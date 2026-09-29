@@ -188,7 +188,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 .hero-badge{
   position: absolute;
   bottom: -16px; left: -16px;
-  background: var(--signal);
+  background: var(--ink);
   color: var(--paper);
   font-family: var(--font-mono);
   font-size: 11px;
