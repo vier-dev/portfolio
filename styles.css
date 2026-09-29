@@ -189,7 +189,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 .hero-badge{
   position: absolute;
   bottom: -16px; left: -16px;
-  background: none;
+  background: var(--ink);
   color: var(--paper);
   font-family: var(--font-mono);
   font-size: 11px;
@@ -198,7 +198,6 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   z-index: 3;
   white-space: nowrap;
   overflow: visible;
-   margin-top: 20px;
 }
 .badge-ring{
   position: absolute;
