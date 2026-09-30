@@ -566,9 +566,6 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 }
 
 .ticker-track span{
-  font-family: var(--font-mono);
-  font-size: 13px;
-  color: var(--muted);
    display: inline-flex;
   align-items: center;
   height: 24px;
