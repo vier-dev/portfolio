@@ -569,11 +569,16 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   font-family: var(--font-mono);
   font-size: 13px;
   color: var(--muted);
+   display: inline-flex;
+  align-items: center;
+  height: 24px;
 }
 
 .ticker-track span img{
-  height: 22px;
+  height: 24px;
+  max-width: 90px;
   width: auto;
+  object-fit: contain;
   display: block;
 }
 
