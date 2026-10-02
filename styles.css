@@ -634,8 +634,12 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   background: var(--signal);
 }
 
-.contact-actions{ border-color: var(--line-soft); color: var(--ink); }
-.contact-actions:hover{ border-color: var(--signal); }
+.contact-actions{ display: flex; gap: 14px; margin-top: 36px; flex-wrap: wrap; }
+
+.contact-primary{ background: var(--ink); color: var(--paper); }
+.contact-primary:hover{ background: var(--ink-soft); }
+.contact-ghost{ border-color: var(--line-soft); color: var(--ink); }
+.contact-ghost:hover{ border-color: var(--signal); }
 
 /* ===================================================================
    FOOTER
