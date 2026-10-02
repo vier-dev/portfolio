@@ -622,9 +622,9 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
    margin-bottom: 32px; 
 }
 
-.contact .tag{ color: var(--signal); }
-.contact-links a{ color: var(--muted); }
-.contact-links a:hover{ color: var(--paper); }
+.contact-links{ display: flex; gap: 24px; margin-top: 28px; font-family: var(--font-mono); font-size: 13.5px; } 
+.contact-links a{ color: var(--muted-on-paper); } 
+.contact-links a:hover{ color: var(--signal); }
 
 .contact .btn-primary{
   background: var(--paper);
