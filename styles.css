@@ -626,11 +626,11 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 .contact-links a{ color: var(--muted-on-paper); } 
 .contact-links a:hover{ color: var(--signal); }
 
-.contact .btn-primary{
+.contact .contact-actions .btn-primary{
   background: var(--paper);
   color: var(--ink);
 }
-.contact .btn-primary:hover{
+.contact .contact-actions .btn-primary:hover{
   background: var(--signal);
 }
 
