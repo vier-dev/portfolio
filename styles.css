@@ -636,9 +636,9 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 
 .contact-actions{ display: flex; gap: 14px; margin-top: 36px; flex-wrap: wrap; }
 
-.contact-primary{ background: var(--ink); color: var(--paper); }
-.contact-primary:hover{ background: var(--ink-soft); }
-.contact-ghost{ border-color: var(--line-soft); color: var(--ink); }
+.contact-primary{ background: var(--paper); color: var(--ink); }
+.contact-primary:hover{ background: var(--signal); }
+.contact-ghost{ border-color: var(--line-soft); color: var(--paper); }
 .contact-ghost:hover{ border-color: var(--signal); }
 
 /* ===================================================================
