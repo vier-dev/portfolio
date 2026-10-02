@@ -626,13 +626,16 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 .contact-links a{ color: var(--muted-on-paper); } 
 .contact-links a:hover{ color: var(--signal); }
 
-.contact .contact-actions .btn-primary{
+.contact .btn-primary{
   background: var(--paper);
   color: var(--ink);
 }
-.contact .contact-actions .btn-primary:hover{
+.contact .btn-primary:hover{
   background: var(--signal);
 }
+
+.contact-actions{ border-color: var(--line-soft); color: var(--ink); }
+.contact-actions:hover{ border-color: var(--signal); }
 
 /* ===================================================================
    FOOTER
