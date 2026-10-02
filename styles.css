@@ -638,7 +638,7 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
 
 .contact-primary{ background: var(--paper); color: var(--ink); }
 .contact-primary:hover{ background: var(--signal); }
-.contact-ghost{ border-color: var(--line-soft); color: var(--paper); }
+.contact-ghost{ border-color: var(--paper); color: var(--paper); }
 .contact-ghost:hover{ border-color: var(--signal); }
 
 /* ===================================================================
