@@ -341,6 +341,11 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   background-size: 28px 28px;
 }
 
+.case-visual:has(img)::before,
+.case-visual:has(img)::after{
+  display: none;
+}
+
 /* EDIT: replace .case-visual divs in HTML with <img> tags once you have real screenshots */
 @media (max-width: 720px){
   .case, .case.reverse{ grid-template-columns: 1fr; direction: ltr; }
