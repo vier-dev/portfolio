@@ -651,7 +651,6 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  box-shadow: 0 0 0 2px var(--signal);
 }
 .contact-tagline .tag{ margin: 0; }
 
