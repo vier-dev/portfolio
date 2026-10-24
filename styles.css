@@ -130,7 +130,7 @@ ul,ol{ margin:0; padding:0; list-style:none; }
   border: 1px solid var(--line-soft);
 }
 
-.wordmark{ font-weight: 800; font-size: 17px; letter-spacing: -0.01em; margin-left: 40px;}
+.wordmark{ font-weight: 800; font-size: 20px; letter-spacing: -0.01em; margin-left: 56px;}
 .wordmark span{ color: var(--signal); }
 .topnav{ display: flex; align-items: center; gap: 28px; font-size: 15px; }
 .topnav a:not(.nav-cta){ color: var(--muted-on-paper); }
