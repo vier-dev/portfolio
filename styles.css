@@ -639,6 +639,24 @@ section{ max-width: var(--max); margin: 0 auto; padding: 96px var(--edge); }
   background: var(--signal);
 }
 
+.contact-tagline{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.contact-avatar{
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 2px var(--signal);
+}
+
+.contact-tagline .tag{ margin: 0; }
+
 .contact-actions{ display: flex; gap: 14px; margin-top: 36px; flex-wrap: wrap; }
 
 .contact-primary{ background: var(--paper); color: var(--ink); }
