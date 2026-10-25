@@ -13,7 +13,7 @@
     C:'#aac4e8', T:'#d6242b',            // shirt, tie
     M:'#b4524f', P:'#12161f'             // mouth, pupils
   };
-  const MESSAGES = ["Hi, I'm Oliver!", "Need a system built?", "Let's talk below ↓"];
+  const MESSAGES = ["Hi, I'm Oliver!", "Need a system built?", "Need help with the backend?", "Let's talk below ↓"];
   // ------------------------------------------------------------------
 
   const MAP = [
